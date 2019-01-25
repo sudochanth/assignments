@@ -1,0 +1,21 @@
+body {
+    color: #6d1933;
+}
+div {
+    margin: 30px;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+
+p, img {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin: 15px;
+}
+
+p {
+    text-align: justify;
+}
+
