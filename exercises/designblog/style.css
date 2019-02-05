@@ -1,0 +1,32 @@
+* {
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: blanchedalmond;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    background-color: pink;
+}
+a {
+    padding: 10px;
+}
+img {
+    float: left;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+}
+section div {
+    margin: auto;
+    border: solid 5px;
+    width: 55%;
+    margin-bottom: 30px;
+    padding: 5px;
+    overflow: auto;
+}

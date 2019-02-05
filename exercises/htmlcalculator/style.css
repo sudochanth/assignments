@@ -1,0 +1,29 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.addition, .subtraction, .multiplication {
+    border: solid 5px;
+    margin: 20px;
+    padding: 30px;
+    width: 500px;
+    text-align: center;
+}
+
+.addition {
+    border-color: yellow;
+}
+.subtraction {
+    border-color: orange;
+}
+.multiplication {
+    border-color: orangered;
+}

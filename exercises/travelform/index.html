@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Arkham Air</h1>
+
+    <div class="travelForm">
+        <h2>Please enter info:</h2>
+        <form name="passengerInfo">
+            <div class="firstname">
+                    First Name: <input id="firstname"
+                    value =""/>
+            </div>
+
+            <div class="lastname">
+                    Last Name: <input id="lastname"/>
+            </div>
+
+            <div class="age">
+                    Age: <input id="userage"/>
+            </div>
+
+            <div class="gender">
+                    Gender:
+                    Female <input 
+                    value="Female"
+                    id="gender" type="radio" name="gender"/>
+                    Male <input
+                    value="Male"
+                    id="gender" type="radio" name="gender"/>
+            </div>
+
+            <div class="destination">
+                Destination:
+                <select id="destination">
+                    <option value="Gotham City">Gotham city</option>
+                    <option value="Central City">Central City</option>
+                    <option value="Atlantis">Atlantis</option>
+                </select>
+            </div>
+
+            <div>
+                Dietary restrictions:
+                <br>
+                Vegetarian: <input type="checkbox" name="diet" value="vegetarian"
+                id="diet">
+                Meat only: <input type="checkbox" name="diet" value="meatonly"
+                id="diet">
+                Picky eater: <input type="checkbox" name="diet" value="pickyeater"
+                id="diet">
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>    
+    </div>    
+    <script src="apps.js"></script>
+</body>
+</html>

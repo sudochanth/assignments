@@ -120,20 +120,11 @@
 // }
 
 // 4.
-// create array.
-// create for loop.
-// create if statement. if properties !== 0 replace prop with 'x'.
-// push new value into array (.push?)
-// print array with new values
-// how to print in a grid?
 var array = [[0, 1, 2], [0, 1, 2], [0, 1, 2]]
 
 for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j < array[i].length; j++) {
-        if (array[i][j] !== "x") {
-            array[i][j] = "x"
-        }
+    for (var j = 0; j < array.length; j++) {
+        array[i][j] = "x";
     }
-    // console.log(array[i])
+    console.log(array[i])
 }
-console.log(array)

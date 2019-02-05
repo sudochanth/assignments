@@ -1,0 +1,12 @@
+* {
+    margin: 0 auto;
+}
+#square {
+    height: 500px;
+    width: 500px;
+    background-color: whitesmoke;
+}
+
+/* .body {
+    background-color: grey;
+} */

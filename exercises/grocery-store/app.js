@@ -19,5 +19,5 @@ console.log(shopper.storeName)
 console.log(shopper.groceryCarts[3])
 // shopper.greeting("sunny")
 console.log(shopper.distanceInFeet)
-shopper.shopHere(true)
+// shopper.shopHere(true)
 
