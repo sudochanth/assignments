@@ -10,6 +10,7 @@ function returnAlert(e) {
     var age = document.getElementById("userage").value;
     var gender = document.getElementById("gender").value;
     var userDestination = document.getElementById("destination").value;
+    
     var checkedDiet = document.passengerInfo.addEventListener("submit", function(e) {
         e.preventDefault();
         var checkedDiet = [];

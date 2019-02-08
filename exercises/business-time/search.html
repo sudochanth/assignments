@@ -5,20 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100i|Pacifico|Slabo+27px" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <header class="header"></header>
+    <header id="header">
         <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <!-- <li><a href="profile.html">Profile</a></li> -->
         </ul>
     </header>
-   
+    <div class="content2">
+        <h1>Let's find you a friend!</h1>
+        <img src="https://i.stack.imgur.com/3BGLm.jpg" class="mapAPI"/>
+        <div class="searchMenu">
+            <h1>Search</h1>
+            <form name="localSingles">
+                <div>Within:</div>
+                <br> 
+                <input type="radio" name="miles" value="5 miles"/> 5 miles 
+                <input type="radio" name="miles" value="10 miles"/> 10 miles 
+                <input type="radio" name="miles" value="20 miles"/> 20 miles 
+                <br>
+                <br>
 
-    <div></div>
-    <footer></footer>
+                <div>I'm looking for someone that:</div>
+                <br>
+                <input type="radio" name="size" value="a wee bit smaller"/> can fit in a purse(small)
+                <input type="radio" name="size" value="a little bit bigger"/> isn't the size of a horse(medium) 
+                <input type="radio" name="size" value="a lot bigger"/> hurts everyone they sit on(large)
+                <br>
+                <br>
+
+                <div>I am looking for a pup mate:</div>
+                <br>
+                <input type="checkbox" value="to take walks and chill" name="interests"/> that's lazy and to take slow walks and chill
+                <input type="checkbox" value="to go on hikes with" name="interests"/> to go on hikes with
+                <input type="checkbox" value="to go swimming with" name="interests"/>to go swimming with
+                <br>
+                <br>
+                <button id="submit">Find me a friend</button>
+            </form>
+        </div>        
+    </div>
+    <footer>
+        <span>123 Ruff Road, Doggy Town</span>
+        <span>1-800-PUPS</span>
+    </footer>
     <script src="apps.js"></script>
 </body>
 </html>
