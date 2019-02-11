@@ -190,14 +190,18 @@ function fight(enemy) {
         }
     }
 
-    // Resets count. How to reset it to this.health???
+    // Resets enemy health
     enemy.count++;
-    if (enemy.count > 0) {
+    if (enemy.count > 0 && enemy === enemy1) {
+        enemy.health = 15;
+    } else if (enemy.count > 0 && enemy === enemy2) {
         enemy.health = 25;
+    } else if (enemy.count > 0 && enemy === enemy3) {
+        enemy.health = 45;
     }
     // test vvvv
-    console.log(enemy.health);
-    console.log(enemy.count);
+    // console.log(enemy.health);
+    // console.log(enemy.count);
     
 }
 
@@ -222,19 +226,29 @@ function randEnemies() {
 
 
 // Intro Dialogue
-console.log(`You are a weary traveler. Going from town to town looking for a job.\n You make your way to a small oceanside town. Upon entering the town you're stopped on the docks by a sketchy looking man next to a ship.\n`);
-var name = readlineSync.question(`Arggh. I've never seen you around these parts. What's yerr name? `)
+console.log(`You are a weary traveler. Going from town to town looking for a job. You make your way to a small oceanside town. Upon entering the town you're stopped on the docks by a sketchy looking man next to a ship.`);
+var name = readlineSync.question(`"Arggh. I've never seen you around these parts. What's yerr name?" `)
 
-if (readlineSync.keyInYN(`${name}? What a great name! Have yerr been around these parts before?`) === true) {
-    console.log(`Oh, well you must have heard about me! I'm the famous Captain Morgan.\n That nasty storm pulled me into this town. Killed all my sailors it did. Now I and me moneky, Goku, be looking for a new crew for my ship.`);
+if (readlineSync.keyInYN(`"${name}? What a great name! Have yerr been around these parts before?"`) === true) {
+    console.log(`"Oh, well you must have heard about me! I'm the famous Captain Morgan. That nasty storm pulled me into this town. Killed all my sailors it did. Now I and me monkey, Goku, be looking for a new crew for my ship."`);
 } else {
-    console.log(`Well let me introduce myself. I am the incredible, fantastic Captain Morgan and this is my monkey, Goku. We're looking for some strong sailors for our ship.`);
+    console.log(`"Well let me introduce myself. I am the incredible, fantastic Captain Morgan and this is my monkey, Goku. We're looking for some strong sailors for our ship."`);
 }
 
 // Game Loop
-if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue this voyage with me ${name}? You'll get fame, fortune and everything in between!`) === true) {
-    console.log(`Well come along then, ${name}! Adventure awaits.`);
-    console.log(`After a few weeks on the water you've come to realize this is your calling.\n This life was meant for you.\n One day as you're setting the rigging you hear the Captain's yell of anguish.\n Oh no!\n Goku has fallen over board.`);
+if (readlineSync.keyInYN(`"Say, you look strong... Would you like to continue this voyage with me ${name}? You'll get fame, fortune and everything in between!"`) === true) {
+    console.log(`"Well come along then, ${name}! Adventure awaits."`);
+    console.log(`TWO WEEKS LATER`);
+    console.log(`           |    |    |`);
+    console.log(`          )_)  )_)  )_)`);
+    console.log(`          )___))___))___)\ `);
+    console.log(`         )____)____)_____)\\ `);
+    console.log(`       _____|____|____|____\\\__ `);
+    console.log(`-------|                    /--------- `);
+    console.log(`     ^^^^^ ^^^^^^^^^^^^^^^^^^^^^`);
+    console.log(`    ^^^^      ^^^^     ^^^    ^^`);
+    console.log(`           ^^^^      ^^^`);
+    console.log(`One sunny day, you hear the Captain's yell of anguish.\n Oh no!\n Goku has fallen over board.`);
     
     if (readlineSync.keyInYN(`Rescue Goku? `) === true) {
         console.log(`Here goes nothing!`)
@@ -259,7 +273,6 @@ if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue thi
 
         for (var i = 0; i < player1.userNet.length; i++) {
             if (player1.userNet[i].includes("goku")) {
-                console.log(`skfjdskfd'`)
                 hasWon = true;
             }
         }
@@ -271,12 +284,14 @@ if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue thi
     }
 
     if (hasWon === true) {
-        console.log(`After what felt like hours of swimming you have made it to land. `);
-        console.log(`Captain Morgan laughs and thanks you repeatedly. "Well, I did say you'd get everything in between.`);
+        console.log(`After what felt like hours of swimming you have made it to land.`);
+        console.log(`Captain Morgan laughs and thanks you repeatedly.`);
+        console.log(`What happened to fame and fortune? You ask him.`);
+        console.log(`He laughs at you. "And everything in between. This is your between."`);
         console.log(`Well. Onto the next chapter.`)
     }
 
 // vvvvv end of game vvvv    
 } else {
-    console.log(`Well, you're missing out on an adventure of a lifetime! It was nice talking to you. I've got to go find a sailor for my ship!`);
+    console.log(`"Well, you're missing out on an adventure of a lifetime! It was nice talking to you. I've got to go find a sailor for my ship!"`);
 }

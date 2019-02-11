@@ -1,0 +1,75 @@
+
+{
+    "menu": [
+        {
+            "appetizers": [
+                {
+                    "name": "hard(drive) boiled egg",
+                    "description": "it's a hard boiled egg...",
+                    "ingredients": ["egg"]
+                },
+                {
+                    "name": "toString cheese",
+                    "description": "what's confusing about string cheese",
+                    "ingredients": ["string", "cheese"]
+                }
+            ]
+        },
+        {
+            "hot entrees": [
+                {
+                    "name": "Chicken Bytes",
+                    "description": "chicken nugget bytes",
+                    "ingredients": ["chicken", "nuggets"]
+                },
+                {
+                    "name": "In-CRUD-ulous Steak and Potatoes",
+                    "description": "steak and potatoes",
+                    "ingredients": ["steak", "potatoes"]
+                }
+            ]
+        },
+        {
+            "cold entrees": [
+                {
+                    "name": "Constructor Own Salad",
+                    "description": "construct your own salad. 50 cents a pound",
+                    "ingredients": ["whatever you want"]
+                },
+                {
+                    "name": "Mongo(db)-a-Mango Sandwich",
+                    "description": "Mango Vinegrette Turkey Sandwich"
+                }
+            ]
+        },
+        {
+            "dessert": [
+                {
+                    "name": "HTM - Elderberry Pie",
+                    "decription": "elderberry pie",
+                    "ingredients": ["whatever elderberry is", "& pie"]
+                },
+                {
+                    "name": "AP - Ice cream",
+                    "description": "it's ice cream",
+                    "ingredients": ["chocolate", "strawberry", "vanilla"]
+                }
+                
+            ]
+        },
+        {
+            "drinks": [
+                {
+                    "name": "This project is stressing me a LATTE",
+                    "description": "it's a latte",
+                    "ingredients": ["how am i supposed to know"]
+                },
+                {
+                    "name": "vodka",
+                    "description": "for those hard days. hey we can't always be witty",
+                    "ingredients": ["vodka"]
+                }
+            ]
+        }
+    ]
+}
