@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+
+p {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.one:hover {
+    background-color: violet;
+}
+.two:hover {
+    
+}
+.three:hover {
+    
+}
+.four:hover {
+    
+}
+.five:hover {
+    
+}
+.six:hover {
+    
+}

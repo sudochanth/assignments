@@ -20,6 +20,7 @@ function Enemy(name, attack, health) {
     this.name = name;
     this.attack = attack;
     this.health = health;
+    this.count = 0;
 }
 
 var low = Math.floor(Math.random()*10) + 5;
@@ -103,7 +104,7 @@ function youDead() {
     console.log("                      '._.'           _/_/");
     console.log("                                      ';| ");
     console.log("You're fish food.");
-    return isAlive = false;
+    // return isAlive = false;
 
 }
 
@@ -131,7 +132,7 @@ function randDamage() {
 function runAway() {
     var random = Math.floor(Math.random()*2);
     if (random === 0) {
-        console.log(`You were able to run away but took ${randDamage()}. Your health is now ${player1.health}.`)
+        console.log(`You were able to run away but took -${randDamage()} damage. Your health is now ${player1.health}.`)
     } else {
         console.log(`You couldn't outswim it. You have to fight!`);
         fight();
@@ -157,13 +158,13 @@ function plusHealth() {
 }
 
 // User's Inventory
-var items = ["key", "boot", "emerald", "pearl", "starfish", "clam shell", "dead fish", "rum"];
+var items = ["key", "boot", "emerald", "pearl", "starfish", "clam shell", "dead fish", "goku"];
 
 function getRandomItem() {
     var randomItem = items[Math.floor(Math.random()*items.length)];
     player1.userNet.push(randomItem);
-    if (randomItem === "rum") {
-        console.log(`You found the lucky bottom of rum! Swim to shore!`)
+    if (randomItem === "goku") {
+        console.log(`You found Goku! Swim to shore!`)
     } else {
         console.log(`You fought bravely. The enemy dropped a ${randomItem}! You have stored it in your net.`); 
     }
@@ -173,20 +174,30 @@ function getRandomItem() {
 function fight(enemy) {
     var enemy = randEnemies();
     
+    
     while (enemy.health >= 0 && player1.health >= 0) {
         player1.health -= enemy.attack;
         enemy.health -= player1.attack;
         console.log(`You took some damage. Your health is now ${player1.health}.`);
         console.log(`You hit ${enemy.name} and their hp is now ${enemy.health}.`);
-    if (enemy.health <= 0) {
-        console.log(`You defeated it!`);
-        console.log(`You've gained some energy. Your health is now ${plusHealth()}.`);
-        getRandomItem();
-    } else if (player1.health <= 0) {
-        youDead();
+        if (enemy.health <= 0) {
+            console.log(`You defeated it!`);
+            console.log(`You've gained some energy. Your health is now ${plusHealth()}.`);
+            getRandomItem();
+        } else if (player1.health <= 0) {
+            youDead();
+            isAlive = false;
         }
     }
 
+    // Resets count. How to reset it to this.health???
+    enemy.count++;
+    if (enemy.count > 0) {
+        enemy.health = 25;
+    }
+    // test vvvv
+    console.log(enemy.health);
+    console.log(enemy.count);
     
 }
 
@@ -196,37 +207,43 @@ function randEnemies() {
     var randEnemy = enemies[Math.floor(Math.random()*enemies.length)];
     if (randEnemy === "enemyOne") {
       enemyOne();
-      return enemy1
+      return enemy1;
     } else if (randEnemy === "enemyTwo") {
       enemyTwo();
-      return enemy2
+      return enemy2;
     } else {
       enemyThree();
-      return enemy3
+      return enemy3;
     }
-  }
+}
 
 
 
 
 
 // Intro Dialogue
-console.log(`Back story back story`);
-var name = readlineSync.question(`Hello. I've never seen you around these parts. What is your name? `)
+console.log(`You are a weary traveler. Going from town to town looking for a job.\n You make your way to a small oceanside town. Upon entering the town you're stopped on the docks by a sketchy looking man next to a ship.\n`);
+var name = readlineSync.question(`Arggh. I've never seen you around these parts. What's yerr name? `)
 
-if (readlineSync.keyInYN(`${name}? What a great name! Have you been around these parts before?`) === true) {
-    console.log(`Oh, well you must have heard about me! I'm the famous Captain Morgan. That nasty storm killed all my sailors and I need a new crew.`);
+if (readlineSync.keyInYN(`${name}? What a great name! Have yerr been around these parts before?`) === true) {
+    console.log(`Oh, well you must have heard about me! I'm the famous Captain Morgan.\n That nasty storm pulled me into this town. Killed all my sailors it did. Now I and me moneky, Goku, be looking for a new crew for my ship.`);
 } else {
-    console.log(`Well let me introduce myself. I am the incredible, fantastic Captain Morgan. That nasty storm killed my whole crew.`);
+    console.log(`Well let me introduce myself. I am the incredible, fantastic Captain Morgan and this is my monkey, Goku. We're looking for some strong sailors for our ship.`);
 }
 
 // Game Loop
 if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue this voyage with me ${name}? You'll get fame, fortune and everything in between!`) === true) {
     console.log(`Well come along then, ${name}! Adventure awaits.`);
-    console.log(`After a few weeks on the water you start to realize this might not have been the best choice.\n Captain Morgan is obssessed with his favorite bottle of rum and never seems to be without it.\n Not only that but the storm seems to rage on.\n Bottle falls blah blah *story story story you fall off ship. oh no. Push 's' to swim to the nearest island*`);
+    console.log(`After a few weeks on the water you've come to realize this is your calling.\n This life was meant for you.\n One day as you're setting the rigging you hear the Captain's yell of anguish.\n Oh no!\n Goku has fallen over board.`);
+    
+    if (readlineSync.keyInYN(`Rescue Goku? `) === true) {
+        console.log(`Here goes nothing!`)
+    } else {
+        console.log(`The Captain tells you he can't swim and pushes you off the ship. "Find me monkey!"`);
+    }
     
     while (isAlive && !hasWon) {
-        var doSomething = readlineSync.keyIn(`What would you like to do? Swim [s] Check Net [n] Quit Game [q]`, {limit: 'snq'})
+        var doSomething = readlineSync.keyIn(`Keep swimming til you find Goku! Swim [s] Check Net [n] Quit Game [q]`, {limit: 'snq'})
 
         if (doSomething === 's') {
             swim();
@@ -241,11 +258,12 @@ if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue thi
         }
 
         for (var i = 0; i < player1.userNet.length; i++) {
-            if (player1.userNet[i].includes("rum")) {
+            if (player1.userNet[i].includes("goku")) {
                 console.log(`skfjdskfd'`)
                 hasWon = true;
             }
-        }        
+        }
+       
     }
 
     if (isAlive === false) {
@@ -253,8 +271,8 @@ if (readlineSync.keyInYN(`Say, you look strong... Would you like to continue thi
     }
 
     if (hasWon === true) {
-        console.log(`After what felt like hours of swimming you have made it to the island. To your surprise Captain Morgan is there waiting for you. You yell at him saying he left you.`);
-        console.log(`Captain Morgan laughs at you. "Well, I did say you'd get everything in between.`);
+        console.log(`After what felt like hours of swimming you have made it to land. `);
+        console.log(`Captain Morgan laughs and thanks you repeatedly. "Well, I did say you'd get everything in between.`);
         console.log(`Well. Onto the next chapter.`)
     }
 
