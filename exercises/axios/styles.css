@@ -1,0 +1,25 @@
+.image {
+    width: 25%;
+    height: 25%;
+}
+
+
+#todo {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid blueviolet;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoBox {
+    border: 5px solid black;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.strikened {
+    text-decoration: line-through;
+}
