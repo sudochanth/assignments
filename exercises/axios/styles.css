@@ -1,25 +1,48 @@
 .image {
-    width: 25%;
-    height: 25%;
+    width: 50%;
+    height: 50%;
 }
 
+h1 {
+    text-align: center;
+}
 
 #todo {
-    display: flex;
-    flex-direction: column;
-    border: 5px solid blueviolet;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 5px solid rgb(152, 109, 192);
+    background-color: rgb(152, 109, 192);
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
-.todoBox {
-    border: 5px solid black;
+.bigContainer {
+    border: 3px solid black;
+    border-radius: 5px;
     margin: 5px;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: auto;
+    height: auto;
+    background-color: white;
+    padding: 5px;
+}
+
+.bigContainer:hover {
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .9);
 }
 
 .strikened {
     text-decoration: line-through;
+    opacity: 0.1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  
 }
