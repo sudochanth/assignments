@@ -1,8 +1,12 @@
-// var axios = require("axios"); in place of cdn
+// var axios = require("axios"); in place of "cdn"
 
 axios.get("https://api.vschool.io/sunny/todo").then(function(response) {
-    // .map
-    response.data.map(function(item) {
+    renderTodos(response.data)
+});
+
+function renderTodos(todo) {
+    // .map 
+    todo.map(function(item) {
         // create elements
         var bigContainer = document.createElement("div");
         bigContainer.className = "bigContainer";
@@ -52,11 +56,11 @@ axios.get("https://api.vschool.io/sunny/todo").then(function(response) {
         input.addEventListener("click", handleChecked);
 
         if (item.completed) {
-           container.classList.toggle("strikened");
-           input.checked = true;
+        container.classList.toggle("strikened");
+        input.checked = true;
         }
     }); 
-});
+}
 
 function handleChecked(e) {
     e.target.parentNode.classList.toggle("strikened");
@@ -96,11 +100,11 @@ document.createList.addEventListener("submit", function(e) {
     e.preventDefault();
     var url = "https://api.vschool.io/sunny/todo";
     var newToDo = {
-        "title": document.getElementById("title").value,
-        "description": document.getElementById("description").value,
-        "price": document.getElementById("price").value,
-        "imgUrl": document.getElementById("image").value,
-        "completed": document.getElementById("completed").value
+        title: document.getElementById("title").value,
+        description: document.getElementById("description").value,
+        price: document.getElementById("price").value,
+        imgUrl: document.getElementById("image").value,
+        completed: document.getElementById("completed").value
     };
 
     axios.post(url, newToDo).then(function(response) {

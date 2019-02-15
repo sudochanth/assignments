@@ -32,7 +32,7 @@ h1 {
 }
 
 .bigContainer:hover {
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, .9);
+    box-shadow: 2px 4px 25px black;
 }
 
 .strikened {
@@ -41,8 +41,29 @@ h1 {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr;
     width: 50%;
-  
+    margin: auto;  
+}
+
+button {
+    background-color: palevioletred;
+    border-radius: 5px;
+}
+
+@media(max-width: 900px) {
+    #todo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    #todo {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
