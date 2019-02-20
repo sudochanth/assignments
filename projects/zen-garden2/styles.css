@@ -66,6 +66,7 @@ a {
     grid-gap: 20px;
     grid-template-rows: auto;
     list-style: none;
+    font-size: 15px;
 }
 
 #links-1 li {
@@ -173,7 +174,10 @@ h2 {
     color: rgba(255, 255, 255, .5)
 }
 
-h3, .font1 {
+.font1 {
+    font-family: font1;
+}
+h3 {
     font-family: font1;
     font-size: large;
 }
