@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    line-height: 30px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 160px;
+}
+
+#sub-header {
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.247);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#sub-header li {
+    color: rgba(255, 255, 255, .7)
+
+}
+
+a {
+    color: #0d8ba1;
+    text-decoration: none;
+
+}
+
+#blank {
+    background-color: #EFF5F2; 
+    display: hidden;
+}
+
+.pad {
+    padding: 40px;
+}
+
+#header-image {
+    background-image: url(noise.png), url(gridlines-opaque.png), url(contours.png), url(huntington.jpg);
+    height: 230px;
+    width: 100%;
+    position: absolute;
+    background-size: auto, auto, auto, cover;
+    z-index: -1;
+}
+
+#logo {
+    height: 25%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#links-1 {
+    background-color: #EFF5F2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    list-style: none;
+}
+
+#links-1 li {
+    /* float: left; */
+    width: 50%;
+    border-top: solid 1px rgba(128, 128, 128, 0.247);
+    height: max-content;
+}
+
+#links-2 {
+   /* column-count: 2; */
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: auto;
+}
+
+#links-2 li {
+    width: 50%;
+    border-top: solid 1px rgba(128, 128, 128, 0.247);
+    height: max-content;    
+}
+
+ul {
+    list-style: none;
+    color: white;
+    font-family: font1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ #links-2 li {
+     list-style: none;
+     font-family: font1;
+     padding: 20px;
+ }
+
+ /* .hide {
+     display: none;
+ } */
+
+#footer-1 {
+    background-image: url(gridlines-opaque.png), url(contours-opaque.png), url(koi.jpg);
+    height: 175px;
+    font-family: font3;
+    /* color: white; */
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+.opa {
+    color: rgba(255, 255, 255, 0.604);
+}
+
+.grey {
+    color: lightgrey;
+}
+
+.white {
+    color: rgba(255, 255, 255, 0.61)
+}
+
+#footer-2 {
+    font-family: font4;
+    display: flex;
+    background-color: #134347;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, .5);
+    font-size: 36px;
+    padding: 1em;
+}
+
+#footer-2 div:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+#footer-2 > div {
+    margin: 8px;
+}
+
+.opa {
+    color: rgba(255, 255, 255, .2);
+}
+
+.bamboo {
+    background-image: url(bamboo.png);
+    background-color: rgba(138,188,159,0.5)
+}
+
+h1 {
+    font-family: font1;
+    color: white;
+}
+
+.font2 {
+    font-family: font2;
+}
+
+.font3 {
+    font-family: font3;
+}
+h2 {
+    font-family: font2;
+    color: rgba(255, 255, 255, .5)
+}
+
+h3, .font1 {
+    font-family: font1;
+    font-size: large;
+}
+
+.font4 {
+    font-family: font4;
+}
+
+p {
+    font-family: font3;
+    font-size: small;
+}
+
+
+@font-face {
+    font-family: font1;
+    src: url(1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
+}
+@font-face {
+    font-family: font2;
+    src: url(kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2);
+}
+@font-face {
+    font-family: font3;
+    src: url(kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2);
+}
+@font-face {
+    font-family: font4;
+    src: url(verdemoderna.woff);
+}
+
+@media (min-width: 1130px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "hdr shdr"
+            "a1 l1"
+            "a2 l2"
+            "a3 bl"
+            "f1 f1"
+            "f2 f2";
+        grid-template-columns: 2fr 1fr; 
+    }
+
+    #header {
+        grid-area: hdr;
+        height: 230px;
+        flex-direction: row;
+    }
+
+    #sub-header {
+        grid-area: shdr;
+        height: 230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #sub-header li {
+        background-color: rgba(255, 255, 255, 0.116);
+        padding: 2em;
+        color: rgba(255, 255, 255, .7);
+    }
+
+    #article-1 {
+        grid-area: a1;
+    }
+
+    #article-2 {
+        grid-area: a2;
+    }
+
+    #article-3 {
+        grid-area: a3;
+    }
+
+    #blank {
+        grid-area: bl;
+    }
+
+    #links-1 {
+        grid-area: l1;
+        display: block;
+    }
+
+    #links-2 {
+        grid-area: l2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-1 {
+        grid-area: f1;
+        font-size: 35px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    #footer-2 {
+        grid-area: f2;
+    }
+}
