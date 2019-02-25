@@ -22,3 +22,8 @@ ul {
 li {
     border: 1px solid sandybrown;
 }
+
+img {
+    height: 150px;
+    width: auto;
+}

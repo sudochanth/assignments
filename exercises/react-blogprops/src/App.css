@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+ul {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    color: white;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#headerImage {
+    background-image: url("https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg");
+    height: 532px;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+}
+
+#blogPost {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+}

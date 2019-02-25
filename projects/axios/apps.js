@@ -7,6 +7,7 @@ axios.get("https://api.vschool.io/sunny/todo").then(function(response) {
 function renderTodos(todo) {
     // .map 
     todo.map(function(item) {
+
         // create elements
         var bigContainer = document.createElement("div");
         bigContainer.className = "bigContainer";

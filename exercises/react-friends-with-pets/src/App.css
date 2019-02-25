@@ -1,0 +1,19 @@
+#friend {
+    border: black 2px solid;
+    margin: 5px;
+    text-align: center;
+}
+
+#friendName {
+    color: blueviolet;
+}
+
+#petName {
+    color: blue;
+}
+
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
