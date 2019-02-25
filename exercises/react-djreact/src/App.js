@@ -31,10 +31,7 @@ class App extends Component {
                     isBlue: true 
                 }
             }
-            
-            
         })
-        
     }
    
     pink = () => {
