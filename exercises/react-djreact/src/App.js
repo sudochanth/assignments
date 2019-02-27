@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Balls from './Ive got balls of steel.mp3';
 import './App.css'
 
 class App extends Component {
@@ -8,9 +9,13 @@ class App extends Component {
             box1: "white",
             box2: "white",
             box3: "white",
-            box4: "white"
+            box4: "white",
+            play1: "false"
         }
     }
+
+    // Creates audio files to use
+    audio1 = new Audio(Balls)
 
     blue = () => {
         this.setState(prevState => {
@@ -20,7 +25,8 @@ class App extends Component {
                     box2: "white",
                     box3: "white",
                     box4: "white",
-                    isBlue: false
+                    isBlue: false,
+                    play1: !this.state.play1
                 }
             } else {
                 return {
@@ -28,12 +34,17 @@ class App extends Component {
                     box2: "blue",
                     box3: "blue",
                     box4: "blue",
-                    isBlue: true 
+                    isBlue: true ,
+                    play1: !this.state.play1
+
                 }
             }
         })
+
+        this.state.play1 ? this.audio1.play() : this.audio1.pause();
     }
    
+
     pink = () => {
         this.setState({
             box1: "pink",

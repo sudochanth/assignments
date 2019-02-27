@@ -1,0 +1,13 @@
+#container {
+    height: 25%;
+    width: 50%;
+    border: solid black 5px;
+}
+
+form {
+    /* border: solid blue 5px; */
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
