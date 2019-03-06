@@ -1,13 +1,66 @@
-#container {
-    height: 25%;
-    width: 50%;
-    border: solid black 5px;
+* {
+    margin: 0;
 }
 
-form {
-    /* border: solid blue 5px; */
-    margin: 25px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 5px;
+#page {
+    margin: 50px;
 }
+#container, #userBadge {
+    /* height: 25%; */
+    /* width: 50%; */
+    border: solid black 1px;
+    border-radius: 15px;
+    display: grid;
+ 
+}
+
+form, #userBadge {
+    /* border: solid blue 5px; */
+    padding: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(5, 50px); */
+    grid-gap: 15px;
+  
+}
+
+#aboutMe, button, textarea {
+    grid-column: 1/ span 2;
+}
+
+button {
+    margin: auto;
+}
+
+input {
+    line-height: 2;
+}
+
+textarea {
+    line-height: 1.5;
+}
+
+#userBadge {
+    position: relative;
+}
+
+header {
+    background-color: pink;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    border-radius: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.top {
+    margin-top: 20px;
+}
+/* --------------------------- */
+
+/* #userBadge {
+    border: solid black 1px;
+    border-radius: 15px;
+} */

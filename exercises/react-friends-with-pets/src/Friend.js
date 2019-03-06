@@ -2,7 +2,7 @@ import React from 'react';
 import Pet from './Pet';
 import './App.css'
 
-{}
+
 const Friend = (props) => {
 
     const mappedPets = props.pets.map((pet, i) => {

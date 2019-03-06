@@ -30,6 +30,7 @@ class App extends Component {
        
     }
 
+
     render() {
         const mappedNames = this.state.names.map((name, i) => {
             return (

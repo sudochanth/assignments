@@ -3,7 +3,7 @@ import Badge from './Badge';
 
 const App = () => {
     return (
-        <div>
+        <div id="page">
             <Badge />
         </div>
     )

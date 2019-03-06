@@ -20,6 +20,7 @@ class App extends Component {
         })
     }
 
+   
     render() {
         let itIs = this.state.isTrue ? 
         <div><h1>Eric</h1><img src={Pic1} alt="Eric"></img></div> : 
