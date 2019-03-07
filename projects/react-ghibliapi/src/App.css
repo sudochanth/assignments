@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+} 
+
+#nav {
+    height: 50px;
+    width: 100%;
+    background-color: lavender;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.link {
+    display: flex;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#welcome {
+    position: absolute;
+    margin-top: 150px;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+
+#noFace {
+    height: 475px;
+    display: flex;
+    /* justify-content: center; */
+    position: absolute;
+}
+
+#noFace:hover {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
+#mappedContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}

@@ -12,7 +12,7 @@ class GhibliProvider extends Component {
         this.state = {
             films: []
         }
-    }
+    }c
 
     getFilms =() => {
         axios.get('https://ghibliapi.herokuapp.com/films').then(response => 
