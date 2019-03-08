@@ -14,7 +14,7 @@ const Film = (props) => {
     // console.log(card)
     return (
         <div>
-           { card ? <div><h1>{card.title}</h1> <h1>{card.description}</h1></div> : "no title yet" }
+           { card ? <div id='filmInfo'><h1>{card.title}</h1> <h2>{card.description}</h2></div> : "no info yet" }
         </div>
     );
 };

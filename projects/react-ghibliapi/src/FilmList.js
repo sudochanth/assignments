@@ -9,20 +9,34 @@ class FilmList extends Component {
     componentDidMount() {
         this.props.getFilms();
     }
-    render() {
-        // console.log(this.props.filmsArray)
-        const mappedFilms = this.props.filmsArray.map((film, i) => <Link className='link' key={film.id} to={`/FilmList/${film.id}`}>{film.title}</Link>)
+
+    randomFilm = () => {
+        var rand = this.props.filmsArray[Math.floor(Math.random() * this.props.filmsArray.length)]
+        this.props.history.push(`/FilmList/${rand.id}`)   
+    }
+
+    getFilm = (film) => {
         return (
+            <Link className='link filmLink' key={film.id} to={`/FilmList/${film.id}`}>{film.title}</Link>
+        )
+    }
 
-            <div id='mappedContainer'>
-                {mappedFilms}
-                <Switch>
-                    <Route exact path='/FilmList/:id' component={Film} />
-                    {/* <Route exact path='/FilmList/:id' render={props => (
-                        <Film film={props} />
-                    )} /> */}
+    render() {
+        const mappedFilms = this.props.filmsArray.map((film, i) => this.getFilm(film))
+        return (
+            <div>
+                <div id='mappedContainer'>{mappedFilms}</div>
+                <div id='buttonContainer'>
+                    <button onClick={this.randomFilm}>Random Film</button>
+                    {/* <button onClick={() => this.props.history.goBack()}>Go Back</button> */}
+                </div>
+                    <Switch>
+                        <Route exact path='/FilmList/:id' component={Film} />
+                        {/* <Route exact path='/FilmList/:id' render={props => (
+                            <Film film={props} />
+                        )} /> */}
 
-                </Switch>
+                    </Switch>
             </div>
         );
 

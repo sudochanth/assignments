@@ -29,6 +29,7 @@ class GhibliProvider extends React.Component {
             </Provider>
         )
     }
+
 }
 
 export default GhibliProvider;
