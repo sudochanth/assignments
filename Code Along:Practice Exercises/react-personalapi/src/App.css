@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+}
+
+header {
+    height: 50px;
+    background: paleturquoise;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#eachCard {
+
+}
+
+
