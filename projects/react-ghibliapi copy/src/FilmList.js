@@ -28,7 +28,7 @@ class FilmList extends Component {
                 <div id='mappedContainer'>{mappedFilms}</div>
                 <div id='buttonContainer'>
                     <button onClick={this.randomFilm}>Random Film</button>
-                    {/* <button onClick={() => this.props.history.goBack()}>Go Back</button> */}
+                    <button onClick={() => this.props.history.goBack()}>Go Back</button>
                 </div>
                     <Switch>
                         <Route exact path='/FilmList/:id' component={Film} />
