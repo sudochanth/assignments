@@ -1,10 +1,11 @@
 const express = require('express');
+const bountyRoute = express.Router();
 const uuid = require('uuid');
 const data = require('./bounties');
+const Bounty = require('./models/bountyModel');
 
-const bountyRouter = express.Router();
 
-bountyRouter.route('/')
+bountyRoute.route('/')
 
   .get((request, response) => {
     response.send(data);
@@ -17,7 +18,7 @@ bountyRouter.route('/')
     response.send(newObj)
   })
 
-bountyRouter.route('/:_id')
+bountyRoute.route('/:_id')
 
   .delete((request, response) => {
     const { _id } = request.params;
@@ -43,4 +44,4 @@ bountyRouter.route('/:_id')
     response.send(data);
   })
 
-module.exports = bountyRouter;
+module.exports = bountyRoute;
