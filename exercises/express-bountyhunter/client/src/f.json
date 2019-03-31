@@ -1,0 +1,395 @@
+{
+	"service": "interior",
+    "serviceType": "auto",
+    "minCost": 0,
+    "maxCost": 2500,
+    "swapper": 
+    	{
+    		"firstName": "Donovan",
+    		"lastName": "Mitchell",
+    		"businessName": "Lights, Car, Action",
+    		"serviceName": "Interior Lights",
+    		"serviceDescription": "If you need to fix your lights in your car, I'm your guy! You can count on Don!",
+    		"phoneNumber": "4357741145",
+    		"email": "LCA@carfam.com",
+				"city": "Taylorsville",
+				"state": "Utah"
+			}
+		}
+{
+	"service": "interior",
+	"serviceType": "auto",
+	"minCost": 0,
+	"maxCost": 2000,
+	"swapper":
+		{
+			"firstName": "Donovan",
+			"lastName": "Mitchell",
+			"businessName": "Lights, Car, Action",
+			"serviceName": "Interior Lights",
+			"serviceDescription": "If you need to fix your lights in your car, I'm your guy! You can count on Don!",
+			"phoneNumber": "4357741145",
+			"email": "LCA@carfam.com",
+			"city": "Taylorsville",
+			"state": "Utah"
+		}
+},
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 3500,
+				"swapper": {
+					"firstName": "Joe",
+					"lastName": "Ingles",
+					"businessName": "Jinglin' Joe's",
+					"serviceName": "Auto Sound",
+					"serviceDescription": "We sell and install car radios so come to Jinglin' Joe's and jingle on your drive home.",
+					"phoneNumber": "4357701102",
+					"email": "jinglinjoe@bestcarradios.com",
+					"city": "Taylorsville",
+					"state": "Utah"
+
+				}
+    	},
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 4500,
+				"swapper": {
+					"firstName": "Dante",
+					"lastName": "Exum",
+					"businessName": "Clean 'em and Exum",
+					"serviceName": "Car Detailing",
+					"serviceDescription": "We provide fast and easy car detailing and will drive to you! So no worries about having to fit this into your schedule",
+					"phoneNumber": "4357714111",
+					"email": "exumdetailing@cars.com",
+					"city": "South Jordan",
+					"state": "Utah"
+
+				}
+    	},
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 5000,
+				"swapper": {
+					"firstName": "Rudy",
+					"lastName": "Gobert",
+					"businessName": "Rudy's Wash",
+					"serviceName": "Car Detailing Wash",
+					"serviceDescription": "If you want sky high service, come to Rudy's Wash for all your car detailing and wash needs.",
+					"phoneNumber": "4357721127",
+					"email": "27rudyswash",
+					"city": "West Valley City",
+					"state": "Utah"
+				}
+    	},
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 2500,
+				"swapper": {
+					"firstName": "Ricky",
+					"lastName": "Rubio",
+					"businessName": "Audio One",
+					"serviceName": "Car Audio",
+					"serviceDescription": "We offer amazing audio options at a low price",
+					"phoneNumber": "4357704105",
+					"email": "RRAudioOne@gmail.com",
+					"city": "Salt Lake City",
+					"state": "Utah"
+				}
+    	}
+
+
+{
+	"service": "Body",
+    "serviceType": "auto",
+    "minCost": 0,
+    "maxCost": 10000,
+    "swapper":
+    	{
+    		"firstName": "Harry",
+    		"lastName": "James",
+    		"businessName": "Harry's Body",
+    		"serviceName": "Body Paint",
+    		"serviceDescription": "Whether it's racing stripes or flames, we have the skill to paint your car!",
+    		"phoneNumber": "4357740131",
+    		"email": "harrysbodyshop@carfam.com",
+    		"city": "Millcreek",
+				"state": "Utah"
+			}
+		}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 12500,
+				"swapper": {
+					"firstName": "Jean",
+					"lastName": "Granger",
+					"businessName": "Jean's Dream",
+					"serviceName": "Body Paint",
+					"serviceDescription": "We'll give you your dream car with a paint job of a lifetime",
+					"phoneNumber": "4358801014",
+					"email": "jeansdream@dream.com",
+					"city": "Draper",
+					"state": "Utah"
+
+				}
+    	}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 5000,
+				"swapper": {
+					"firstName": "Sirius",
+					"lastName": "Black",
+					"businessName": "Black's Repair",
+					"serviceName": "Auto Body Repair",
+					"serviceDescription": "Auto body repair for when everything seems to go wrong.",
+					"phoneNumber": "4352371774",
+					"email": "blacksrepairshop@gmail.com",
+					"city": "Sandy",
+					"state": "Utah"
+				}
+    	}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 5500,
+				"swapper": {
+					"firstName": "Collin",
+					"lastName": "Creevey",
+					"businessName": "Speed One",
+					"serviceName": "Auto Body Repair",
+					"serviceDescription": "Speedy service for your auto body needs",
+					"phoneNumber": "4357781881",
+					"email": "speed1@gmail.com",
+					"city": "Lehi",
+					"state": "Utah"
+				}
+    	},
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 5500,
+				"swapper": {
+					"firstName": "Ronald",
+					"lastName": "Weasley",
+					"businessName": "Ronald's Repair",
+					"serviceName": "Auto Body Repair",
+					"serviceDescription": "Auto body repair",
+					"phoneNumber": "4357711200",
+					"email": "ronaldsrepair@yahoo.com",
+					"city": "Ogden",
+					"state": "Utah"
+				}
+    	}
+
+
+{
+	"service": "Mechanical",
+    "serviceType": "auto",
+    "minCost": 0,
+    "maxCost": 12500,
+    "swapper":
+    	{
+    		"firstName": "Howl",
+    		"lastName": "Pendragon",
+    		"businessName": "Howls Tires",
+    		"serviceName": "Tire Sales",
+    		"serviceDescription": "Tire sales, replacements, etc",
+    		"phoneNumber": "4351010732",
+    		"email": "howls@carfam.com",
+    		"city": "Lehi",
+				"state": "Utah"
+			}
+		}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 12500,
+				"swapper": {
+					"firstName": "Sophie",
+					"lastName": "Grey",
+					"businessName": "Sophie's Shop",
+					"serviceName": "Auto Mechanic",
+					"serviceDescription": "Any oil changes, I can do.",
+					"phoneNumber": "4352314567",
+					"email": "sophiesshop@car.com",
+					"city": "Kearns",
+					"state": "Utah"
+				}
+    	}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 15500,
+				"swapper": {
+					"firstName": "Mark",
+					"lastName": "Black",
+					"businessName": "Mark's Engine Repair",
+					"serviceName": "Auto Mechanic",
+					"serviceDescription": "Engine repair.",
+					"phoneNumber": "4351311773",
+					"email": "enginerepairmarks@car.com",
+					"city": "West Valley",
+					"state": "Utah"
+
+				}
+    	}
+    	{
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 5000,
+				"swapper": {
+					"firstName": "Seymour",
+					"lastName": "Lesley",
+					"businessName": "Integrity Mechanics",
+					"serviceName": "Auto Mechanic",
+					"serviceDescription": "Any automative service, oil changes, filter changes, etc.",
+					"phoneNumber": "4357791080",
+					"email": "integritymechanics@gmail.com",
+					"city": "Orem",
+					"state": "Utah"
+
+				}
+    	},
+    	{
+
+				"service": "interior",
+				"serviceType": "auto",
+				"minCost": 0,
+				"maxCost": 10000,
+				"swapper": {
+					"firstName": "Mike",
+					"lastName": "Palmer",
+					"businessName": "Mike Palmer Auto",
+					"serviceName": "Auto Mechanic",
+					"serviceDescription": "I'll fix your car.",
+					"phoneNumber": "4353311005",
+					"email": "mpauto@car.com",
+					"city": "Salt Lake City",
+					"state": "Utah"
+				}
+    	}
+  
+
+______________________
+
+{
+	"service": "cleaning",
+    "serviceType": "home",
+    "minCost": 0,
+    "maxCost": 2500,
+    "swapper":
+    	{
+    		"firstName": "Minnie",
+    		"lastName": "Mitchell",
+    		"businessName": "Minnie's Cleaning",
+    		"serviceName": "Cleaning",
+    		"serviceDescription": "We do top to bottom cleaning",
+    		"phoneNumber": "8014441111",
+    		"email": "minnieclean@house.com",
+				"city": "Taylorsville",
+				"state": "Utah"
+			}
+		}
+    	{
+				"service": "cleaning",
+				"serviceType": "home",
+				"minCost": 0,
+				"maxCost": 500,
+				"swapper": {
+					"firstName": "Ken",
+					"lastName": "Jones",
+					"businessName": "Maid for You",
+					"serviceName": "Cleaning",
+					"serviceDescription": "We have maids to come clean your house",
+					"phoneNumber": "8015421108",
+					"email": "maid4you@gmail.com",
+					"city": "Taylorsville",
+					"state": "Utah"
+				}
+    	},
+{
+	"service": "plumbing",
+    "serviceType": "home",
+    "minCost": 0,
+    "maxCost": 3000,
+    "swapper":
+    	{
+    		"firstName": "Bill",
+    		"lastName": "Dautrieve",
+    		"businessName": "Bill's Plumbing Services",
+    		"serviceName": "Plumbing",
+    		"serviceDescription": "I respond fast to plumbing issues",
+    		"phoneNumber": "8012228012",
+    		"email": "billsplumbing@house.com",
+				"city": "West Jordan",
+				"state": "Utah"
+			}
+		}
+    	{
+				"service": "Landscaping",
+				"serviceType": "home",
+				"minCost": 0,
+				"maxCost": 2500,
+				"swapper": {
+					"firstName": "Emily",
+					"lastName": "Porter",
+					"businessName": "Logan Design",
+					"serviceName": "Landscaping",
+					"serviceDescription": "landscaping at a good cost",
+					"phoneNumber": "8012448924",
+					"email": "logandesgin@gmail.com",
+					"city": "South Jordan",
+					"state": "Utah"
+				}
+    	},
+{
+		"service": "Landscaping",
+    "serviceType": "home",
+    "minCost": 0,
+    "maxCost": 3000,
+    "swapper":
+    	{
+    		"firstName": "Veronica",
+    		"lastName": "Lane",
+    		"businessName": "Lanescaping",
+    		"serviceName": "Landscaping",
+    		"serviceDescription": "Beautiful landscaping",
+    		"phoneNumber": "801895141",
+    		"email": "lanescaping@hotmail.com",
+				"city": "Taylorsville",
+				"state": "Utah"
+			}
+		}
+    	{
+				"service": "plumbing",
+				"serviceType": "home",
+				"minCost": 0,
+				"maxCost": 100,
+				"swapper": {
+					"firstName": "Sam",
+					"lastName": "Jones",
+					"businessName": "Jones Family Plumbing",
+					"serviceName": "Plumbing",
+					"serviceDescription": "Choose our family to help your family needs.",
+					"phoneNumber": "8019924545",
+					"email": "jonesfamilyplumbing@hotmail.com",
+					"city": "Sandy",
+					"state": "Utah"
+				}
+    	},

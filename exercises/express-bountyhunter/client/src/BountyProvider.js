@@ -6,31 +6,58 @@ class BountyProvider extends React.Component {
   constructor() {
     super()
     this.state = {
-      fName: '',
-      lName: '',
-      isAlive: '',
-      amount: '',
-      type: '',
-      _id: '',
       bounties: []
     }   
   }
 
   // GET
   getBounties = () => {
-    axios.get(`/bounties`).then(response => {
-      // console.log(response.data);
+    axios.get(`/bounties`)
+    .then(response => {
+      console.log(response.data);
       this.setState({
         bounties: response.data
       })
     })
   }
 
+  // GET One Object
+  // getOne = () => {
+  //   axios.get(`/bounties/${_id}`, )
+  // }
+
   // POST
-  
-  componentDidMount() {
-    console.log('hello v')
-    this.getBounties();
+  addBounties = (newBounty) => {
+    axios.post('/bounties', newBounty)
+    .then(response => {
+      console.log(`new bounty ${response.data}`)
+      this.setState(prevState => ({
+        bounties: [...prevState.bounties, response.data]
+      }))
+    })
+  }
+
+  // PUT
+  editBounties = (_id, updatedBounty) => {
+    axios.put(`/bounty/${_id}`, updatedBounty)
+    .then(response => {
+      const updatedB = response.data;
+      this.setState(prevState => ({
+        bounties: prevState.bounties.map(bounty => bounty._id === _id ? updatedB : bounty)
+      }))
+    })
+    .catch(err => console.log(err))
+  }
+
+  // DELETE
+  deleteBounties = (_id) => {
+    axios.delete(`/bounties/${_id}`)
+    .then(response => {
+      this.setState(prevState => ({
+        bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
+      }))
+    })
+    .catch(err => console.log(err))
   }
 
   render() {
@@ -38,6 +65,9 @@ class BountyProvider extends React.Component {
     return (
      <Provider value={{
        getBounties: this.getBounties,
+       addBounties: this.addBounties,
+       deleteBounties: this.deleteBounties,
+       editBounties: this.editBounties,
       ...this.state
      }}>
       {this.props.children}
@@ -54,3 +84,10 @@ export function withBounty (C) {
                     {value => <C {...value}{...props }/>}
                   </Consumer>
 }
+
+// same as ^^^^
+// export const withBounty = C => props => (
+//   <Consumer>
+//       {value => <C {...value}{...props}/>}
+//   </Consumer>
+// )
